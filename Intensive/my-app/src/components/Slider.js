@@ -48,7 +48,7 @@ class Slider extends React.Component {
 			if(this.state.active === this.state.max - 1){
 				this.state.active = 0
 			} else {
-				this.state.active + 1
+				this.state.active++
 			}
 
 			this.setState({
@@ -122,16 +122,17 @@ class Slider extends React.Component {
 	renderPlayStop(){
 		let playStop;
 
-		if(this.state.autoPlay){
+		if(this.state.autoplay){
 			playStop =  <svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24'>
 						    <path d='M0 0h24v24H0z' fill='none'/>
 						    <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z'/>
 						</svg>;
 		}else{
-			<svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24'>
-			    <path d='M0 0h24v24H0z' fill='none'/>
-			    <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z'/>
-			</svg>;
+
+			playStop = <svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24'>
+						    <path d='M0 0h24v24H0z' fill='none'/>
+						    <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z'/>
+						</svg>;
 		}
 		return playStop
 	}
@@ -178,7 +179,7 @@ class Slider extends React.Component {
 
 				<a 
 				className='toggle-play'
-				onClick={this.toggleAutoplay}>
+				onClick={this.toggleAutoPlay}>
 					{this.renderPlayStop()}
 				</a>
 			</div>
