@@ -73,21 +73,21 @@ class Menu extends React.Component {
 	render() {
 		return (
 			<Row>
-				<Col lg={3} md={3}>
+				<Col lg={3} md={3} sm={3}>
 					<Repair>Ремонт айфонов в сервисном центре и на выезде</Repair>
 				</Col>
-				<Col lg={3} md={3} lgOffset={1}>
+				<Col lg={3} md={3} sm={3} lgOffset={1}>
 					<Worktime>Пн-пт с 10 до 20, сб,вс с 11 до 18
 					<Adress addr="Ленинская,31"/>
 					</Worktime>
 				</Col>
-				<Col lg={3} md={3}>
+				<Col lg={3} md={3} sm={3}>
 					<Calls>Звонки принимаются 24 часа
 					<Tel tel="8 (846) 922 55 44" />
 					</Calls>
 
 				</Col>
-				<Col lg={2} md={2}>
+				<Col lg={2} md={2} sm={2}>
 					<CallButton>Заказать звонок!</CallButton>
 				</Col>
 			</Row>
